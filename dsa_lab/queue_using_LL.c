@@ -1,4 +1,4 @@
-// Implementation of Stack using Linked List in C programming language
+// Implementation of Queue using Linked List in C programming language
 // Menu driven program
 // 1. push
 // 2. pop
@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct stack_using_LL
+typedef struct queue_using_LL
 {
     int data;
     struct stack_using_LL *next;
@@ -23,35 +23,41 @@ ListNode *CreateNode(int data)
     return Node;
 }
 
-ListNode *push(ListNode *top, int data)
+ListNode *push(ListNode *front, int data)
 {
     ListNode *newNode = CreateNode(data);
-    if (top != NULL)
+    if (front == NULL)
     {
-        newNode->next = top;
+        front = newNode;
+        return front;
     }
-    top = newNode;
-    return top;
+    ListNode *temp = front;
+    while (temp->next != NULL)
+    {
+        temp = temp->next;
+    }
+    temp->next = newNode;
+    return front;
 }
 
-ListNode *pop(ListNode *top)
+ListNode *pop(ListNode *front)
 {
-    printf("Last poped value = %d\n", top->data);
-    ListNode *temp = top;
-    top = top->next;
+    printf("Last poped element = %d\n", front->data);
+    ListNode *temp = front;
+    front = front->next;
     free(temp);
-    return top;
+    return front;
 }
 
-int peek(ListNode *top)
+int peek(ListNode *front)
 {
-    return top->data;
+    return front->data;    
 }
 
-void printStack(ListNode *top)
+void printQueue(ListNode *front)
 {
-    ListNode *temp = top;
-    printf("Stack : ");
+    ListNode *temp = front;
+    printf("Queue : ");
     while (temp != NULL)
     {
         printf("-> %d ", temp->data);
@@ -61,12 +67,11 @@ void printStack(ListNode *top)
 
 int main()
 {
-    int choice, data, maxSize, stackSize = 0;
-    printf("Enter maximum size of STACK : ");
+    int choice, data, maxSize, QueueSize = 0;
+    printf("Enter maximum size of QUEUE : ");
     scanf("%d", &maxSize);
-    ListNode *top = NULL;
-    // ListNode var1 = { 11, NULL};
-    // printf("value of var1 = %d\naddress of var2 = %d\n", var1.data, var1.next);
+    ListNode *front = NULL;
+
     while (1)
     {
         printf("\n=====MENU=====\n1. push\n2. pop\n3. peek\n4. is_full\n5. is_empty\n0. Exit\nEnter choice : ");
@@ -81,9 +86,9 @@ int main()
         case 1:
         case 4:
         {
-            if (stackSize == maxSize)
+            if (QueueSize == maxSize)
             {
-                printf("Stack is full\n");
+                printf("Queue is full\n");
                 break;
             }
             switch (choice)
@@ -93,15 +98,15 @@ int main()
                 // push
                 printf("Enter value to be inserted: ");
                 scanf("%d", &data);
-                top = push(top, data);
-                stackSize++;
-                printStack(top);
+                front = push(front, data);
+                QueueSize++;
+                printQueue(front);
                 break;
             }
             case 4:
             {
                 // if_full
-                printf("Stack is NOT full\n");
+                printf("Queue is NOT full\n");
                 break;
             }
             }
@@ -112,9 +117,9 @@ int main()
         case 3:
         case 5:
         {
-            if (stackSize == 0)
+            if (QueueSize == 0)
             {
-                printf("Stack is empty\n");
+                printf("Queue is empty\n");
                 break;
             }
             switch (choice)
@@ -122,22 +127,22 @@ int main()
             case 2:
             {
                 // pop
-                top = pop(top);
-                stackSize--;
-                printStack(top);
+                front = pop(front);
+                QueueSize--;
+                printQueue(front);
                 break;
             }
             case 3:
             {
                 // peek
-                int res = peek(top);
+                int res = peek(front);
                 printf("Value at the top = %d", res);
                 break;
             }
             case 5:
             {
                 // is_empty
-                printf("Stack is NOT empty\n");
+                printf("Queue is NOT empty\n");
                 break;
             }
             }
