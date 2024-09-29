@@ -12,7 +12,7 @@
 typedef struct queue_using_LL
 {
     int data;
-    struct stack_using_LL *next;
+    struct queue_using_LL *next;
 } ListNode;
 
 ListNode *CreateNode(int data)
