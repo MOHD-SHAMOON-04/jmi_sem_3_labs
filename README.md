@@ -34,7 +34,7 @@ This directory contains shell scripts and other Linux-related programs from the 
 You can clone this repository using:
 
 ```bash
-git clone https://github.com/your-username/jmi_sem_3_labs.git
+git clone https://github.com/MOHD-SHAMOON-04/jmi_sem_3_labs
 ```
 Each folder contains source code for individual lab programs.
 Simply navigate to the respective folder and compile the programs using a C compiler (like gcc for C programs or g++ for C++ programs).
