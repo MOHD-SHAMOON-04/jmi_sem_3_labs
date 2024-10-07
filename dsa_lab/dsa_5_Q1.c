@@ -11,6 +11,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// re-do-this
+
 // print array
 void prtArr(int *a, int head, int rear)
 {
