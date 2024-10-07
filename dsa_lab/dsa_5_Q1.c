@@ -53,8 +53,8 @@ int main()
 
     printf("Enter maximum size of Queue : ");
     scanf("%d", &maxsize);
-
-    int *arr = malloc(maxsize * sizeof(int));
+    int arr[10];
+    // int *arr = malloc(maxsize * sizeof(int));
 
     while (1)
     {
