@@ -1,0 +1,24 @@
+01. Shell script to add two numbers
+02. Shell script to sum the digits of a number
+03. Shell script to print a greeting according to system time
+04. Shell script to take a number as decimal input and print it in binary
+05. Shell script to check login every minute & print a login message
+06. Shell script to delete all files with a .tmp extension
+07. Shell script to print the reverse of a number
+08. Shell script to check for a leap year
+09. Shell script to take an input file & delete all lines containing a given word
+10. Shell script to print all files with given permissions
+11. Shell script to implement a menu-driven program to do [1. sum of digits, 2. multiplication, 3. factorial, 4. exit]
+12. Shell script to print all the prime numbers between n and m
+13. Shell script to add two real numbers
+14. Shell script to input two files and copy one to another
+15. Shell script to accept a number in decimal format and convert it to octal, hexadecimal, and binary
+16. Shell script to accept input base, output base, and a number and convert it
+17. Shell script to display n lines, starting from line m from a file without using head or tail command
+18. Shell script to generate all possible combinations of 1, 2, 3 using a for loop
+19. Shell script to generate all unique combinations of 1, 2, 3 using a for loop
+20. Shell script to change file extension from .cpp to .c
+21. Shell script to receive any number of file names as arguments, then check whether each argument is a file or a directory. If it is a directory, it should be appropriately reported. If it is a file, the name of the file as well as the number of lines should be reported.
+22. Shell script to search for the word "linux" in some of the files supplied as arguments. The script should search each file for the word 'linux' & stop at the first file in which it is present, then display this file on the screen.
+23. Shell script to accept some number of arguments. If an even number of files are supplied, then odd-numbered files should be copied into even-numbered files, i.e., 1->2, 3->4, and so on. If an odd number of files are provided, then do nothing and display an appropriate error message.
+24. Shell script to receive any number of file names as arguments. The script should check which files already exist. If they do, it should be reported. If they do not exist, then check if a subdirectory named 'mydir' exists in the current directory. If it doesn't, then it should be created. If 'mydir' already exists, then it should be reported along with the number of files that are currently present in 'mydir', and the files that do not exist should be created inside 'mydir'.
