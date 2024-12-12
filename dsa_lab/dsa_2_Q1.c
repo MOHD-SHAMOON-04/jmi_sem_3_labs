@@ -2,6 +2,7 @@
 // Q1- wap to remove duplicate eles from an array
 
 #include <stdio.h>
+#include <stdlib.h>
 //taking array input
 void input_arr(int *a, int n)
 {
@@ -65,7 +66,7 @@ int main()
 	int num;
 	printf("enter number of elements: "); //1
 	scanf("%d", &num); //2
-	int a[num]; //3
+	int *a = (int *)malloc(num * sizeof(int)); //3
 	
 	input_arr(a, num); //fun1
 	printf("original\n");

@@ -1,6 +1,8 @@
 // c lab 2 (29/7/24)
 // q1 wap to find min and max ele in an array & exchange their places
 #include <stdio.h>
+#include <stdlib.h>
+
 //to find min
 int min_arr(int *b, int n)
 {
@@ -52,7 +54,7 @@ int main()
     int n;
     printf("Enter the size of array: ");
     scanf("%d",&n);
-	int a[n];
+	int *a = (int *) malloc(n * sizeof(int));
     take_arr(a,n);
 	prt_arr(a,n);
 	min = min_arr(a, n);

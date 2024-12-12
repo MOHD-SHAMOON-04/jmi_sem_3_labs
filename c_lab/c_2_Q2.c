@@ -2,6 +2,7 @@
 // q2 wap to rotate elements of an array by given number n
 // (ex q2: {11,22,33,44,55,66},     rotate by n=2,    {55,66,11,22,33,44}   )
 #include <stdio.h>
+#include <stdlib.h>
 //takeing input
 void take_arr(int* b,int n){
 	for (int i=0;i<n;i++){
@@ -37,7 +38,7 @@ int main()
 	int n , num;
     printf("Enter the size of array: ");
     scanf("%d",&n);
-	int a[n];
+	int *a = (int *) malloc(n * sizeof(int));
     take_arr(a,n);
 	printf("initial array is:\n");
 	prt_arr(a, n);

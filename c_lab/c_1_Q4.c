@@ -11,6 +11,7 @@
 
 //QUESTION 4
 #include<stdio.h>
+#include<stdlib.h>
 
 //taking input
 void take_arr(int *a, int n){
@@ -68,7 +69,7 @@ int main()
     int num;
     printf("enter size of array: ");
     scanf("%d",&num);
-    int a[num];
+    int *a = (int *)malloc(num*sizeof(int));
     
     take_arr(a,num);
     print_arr(a,num);
